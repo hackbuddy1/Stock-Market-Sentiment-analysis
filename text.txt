@@ -1,0 +1,3 @@
+Goal : To find the up/down of stocks by getting positive/negative news of company.
+We will use yahoo finance and a news api.
+we will import pandas yfinance(yahoo finance) newsapi-python(News headlines nikalne ke liye) vaderSentiment(Yeh TextBlob ka upgrade hai. Yeh special social media aur financial news ke sentiment ko samajhne ke liye banaya gaya hai. Yeh "The service is not great, but the food was good" jaise mixed sentences ko behtar samajhta hai.)
