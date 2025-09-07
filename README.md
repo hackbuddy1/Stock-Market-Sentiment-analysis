@@ -50,8 +50,8 @@ The project followed a structured, multi-stage analytical approach:
     *   The analysis was focused on the recent 30-day period for which news data was available to ensure a fair comparison.
 
 4.  **Iterative Analysis:**
-    *   **Level 1 (Linear Correlation):** Started with a standard **Pearson correlation** matrix to test for a simple linear relationship.
-    *   **Level 2 (Non-Linear Correlation):** Used a **Spearman Rank Correlation** to test for a more flexible, non-linear (monotonic) relationship.
+    *   **Level 1 (Linear Correlation):** Started with a standard **Subplot** and **Pearson correlation** matrix to test for a simple linear relationship.
+    *   **Level 2 (Non-Linear Correlation):** Used a **Scatter Plot** and **Spearman Rank Correlation** to test for a more flexible, non-linear (monotonic) relationship.
     *   **Level 3 (Visual Analysis):** Created time-series plots and scatter plots to visually inspect patterns that statistical numbers might miss.
     *   **Level 4 (Time Lag Analysis):** Developed a **Lagged Correlation Matrix** to test the hypothesis that market volatility might react to news from previous days (1, 2, or 3 days prior).
 
@@ -64,8 +64,8 @@ The analysis revealed a fascinating and non-obvious relationship between sentime
 ### 1. Simple Correlation is Deceptive
 Both the Pearson (linear) and Spearman (non-linear, monotonic) correlation tests returned a value near **zero (~0.01)**. This statistically proves that there is **no simple, consistent, or predictable relationship** between the two variables. A rising sentiment does not consistently lead to a rise or fall in volatility.
 
-![Lagged Correlation Matrix](path/to/your/lagged_correlation_matrix.png)
-*(Yeh chart dikhata hai ki saare correlation numbers (lagged bhi) 0 ke paas hain)*
+![Lagged Correlation Matrix](images/Laggged-correlation.png)
+
 
 ### 2. Visual Analysis Reveals the True "Conditional" Relationship
 The scatter plot was the key to unlocking the true insight. It revealed that:
@@ -73,14 +73,14 @@ The scatter plot was the key to unlocking the true insight. It revealed that:
 *   **High volatility states** (`> 0.03`) were *only* observed when the **news sentiment was positive**.
 *   However, positive sentiment does not *guarantee* high volatility; it only **creates the necessary environment** for it.
 
-![Scatter Plot](path/to/your/scatter_plot.png)
-*(Yeh aapka sabse powerful visual hai, jo is conditional relationship ko dikhata hai)*
+![Scatter Plot](images/Scatter-plot.png)
+
 
 ### 3. The "Sentiment Shock" Trigger
 The time-series plot confirmed the findings from the scatter plot. The largest spikes in volatility were consistently preceded by or occurred during periods of strong positive sentiment. This suggests that volatility doesn't react to minor sentiment changes, but to **"sentiment shocks"**—sudden, strong positive news events that act as a trigger.
 
-![Time-Series Plot](path/to/your/final_line_chart.png)
-*(Yeh aapka zoomed-in line chart hai)*
+![Time-Series Plot](images/subplot.png)
+
 
 ---
 
@@ -96,11 +96,11 @@ My analysis demonstrates that while negative or neutral news is associated with 
 
 1.  **Clone the repository:**
     ```bash
-    git clone https://github.com/YourUsername/YourRepositoryName.git
+    git clone https://github.com/hackbuddy1/Stock-Market-Sentiment-analysis.git
     ```
 2.  **Navigate to the project directory:**
     ```bash
-    cd YourRepositoryName
+    cd Stock-Market-Sentiment-analysis
     ```
 3.  **Install the required libraries:**
     ```bash
